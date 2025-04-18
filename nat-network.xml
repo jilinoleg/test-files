@@ -1,0 +1,15 @@
+<network>
+  <name>it-planet-net</name>
+  <forward mode='nat'/>
+  <bridge name='virbr1' stp='on' delay='0'/>
+  <domain name='it-planet.example'/>
+  <ip address='192.168.100.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.100.100' end='192.168.100.150'/>
+      <!-- Static IP reservations for your VMs -->
+      <host mac='52:54:00:00:00:10' name='sunny' ip='192.168.100.10'/>
+      <host mac='52:54:00:00:00:11' name='luna' ip='192.168.100.11'/>
+      <host mac='52:54:00:00:00:12' name='star' ip='192.168.100.12'/>
+    </dhcp>
+  </ip>
+</network>
